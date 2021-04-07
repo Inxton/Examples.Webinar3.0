@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="testPrg" Id="{284c981a-3d3a-44ac-a94d-d0ee8e438c41}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM testPrg
+VAR
+	testString : STRING;
+	testByte: BYTE;
+	{attribute addProperty Name "X"}
+	fbDriveX : fbDrive;
+	
+	{attribute addProperty Name "Y"}
+	fbDriveY : fbDrive;
+	
+	{attribute addProperty Name "Z"}
+	fbDriveZ : fbDrive;
+	
+	fbDrive2dArray: ARRAY [0..2, 0..2] OF fbDrive;
+	
+	fbDrive3dArray: ARRAY [0..2, 0..3, 0..4] OF fbDrive;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbDriveX();
+fbDriveY();
+fbDriveZ();]]></ST>
+    </Implementation>
+    <LineIds Name="testPrg">
+      <LineId Id="14" Count="1" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

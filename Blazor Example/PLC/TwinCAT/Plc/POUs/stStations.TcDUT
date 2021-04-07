@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <DUT Name="stStations" Id="{99c49ff2-b94e-0afe-3f2a-ac6f2b08d265}">
+    <Declaration><![CDATA[{attribute wpf [Container(Layout.Tabs)]}
+TYPE stStations :
+STRUCT
+	{attribute addProperty Name "Station1"}
+	stationCu1 : stStationCu1;
+	{attribute addProperty Name "Station2"}
+	stationCu2 : stStationCu2;
+	{attribute addProperty Name "Station3"}
+	stationCu3 : stStationCu3;
+	{attribute addProperty Name "Station4"}
+	stationCu4 : stStationCu4;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

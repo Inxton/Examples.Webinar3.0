@@ -1,0 +1,18 @@
+2021-04-07 15:21:28.601 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-07 15:21:29.279 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-07 15:21:30.060 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-07 15:21:30.307 +02:00 [INF] Updating project Plc.Plc
+2021-04-07 15:21:34.083 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-07 15:21:34.085 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-07 15:22:55.588 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-07 15:22:55.949 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-07 15:22:56.768 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-07 15:22:57.012 +02:00 [INF] Updating project Plc.Plc
+2021-04-07 15:23:00.844 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-07 15:23:00.847 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-07 15:23:46.769 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-07 15:23:47.130 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-07 15:23:47.839 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-07 15:23:48.092 +02:00 [INF] Updating project Plc.Plc
+2021-04-07 15:23:51.455 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-07 15:23:51.458 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.

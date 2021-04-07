@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <DUT Name="stProgressBar" Id="{f6dea247-6071-40ea-b6e9-5d421112de02}">
+    <Declaration><![CDATA[TYPE stProgressBar :
+STRUCT
+	{attribute addProperty Name "<#Integer From PLC#>"}	
+	testInteger : INT;
+	{attribute addProperty Name "<#Bool From PLC#>"}	
+    testBool : BOOL;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

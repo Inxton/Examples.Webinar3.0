@@ -1,0 +1,31 @@
+{
+  "ConfigFile": null,
+  "OutputDirectory": "D:\\Dado MTS\\Blazor Webinar Example\\Examples.Webinar3.0\\Blazor Example\\_Vortex\\out",
+  "SolutionPath": "D:\\Dado MTS\\Blazor Webinar Example\\Examples.Webinar3.0\\Blazor Example\\Blazor.Webinar.Example.sln",
+  "CompilableAttributesSignatures": [
+    "wpf",
+    "clr"
+  ],
+  "TypeAttributesContainer": {
+    "AttributesDictionary": {
+      "vortex.compiler.Coding.BuilderOnliner": {
+        "Attributes": []
+      },
+      "vortex.compiler.Coding.BuilderPlainer": {
+        "Attributes": []
+      },
+      "vortex.compiler.Coding.BuilderOnlinerInterface": {
+        "Attributes": []
+      },
+      "vortex.compiler.Coding.BuilderShadowerInterface": {
+        "Attributes": []
+      }
+    }
+  },
+  "CreatePlcLibraries": false,
+  "UpdateControllerVersionInfo": false,
+  "CloseVisualStudionOnDone": false,
+  "BuildConnectorProjects": false,
+  "IsLibraryCapable": true,
+  "DoInferUnknownTypes": false
+}

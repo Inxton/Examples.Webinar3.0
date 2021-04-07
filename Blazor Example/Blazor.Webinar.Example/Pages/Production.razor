@@ -1,0 +1,71 @@
+﻿@page "/production"
+@inherits RenderableComponentBase
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card shadow p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                    <h5 class="card-header">Good pieces</h5>
+                    <h1 class="text-center text-success">534</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card shadow p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                    <h5 class="card-header">Bad pieces</h5>
+                    <h1 class="text-center text-danger">120</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="form-check form-switch">
+    <input class="form-check-input"
+           type="checkbox"
+           @bind="@PlcConnector.Entry.Plc.MAIN.progressBar.testBool.Cyclic">
+</div>
+
+
+<div class="card shadow p-3 mb-5 bg-body rounded">
+    
+    <div class="card-body">
+        <h5 class="card-title">Daily goal</h5>
+        <p><b>Current count:</b> @PlcConnector.Entry.Plc.MAIN.progressBar.testInteger.Cyclic </p>
+        <div class="progress ">
+            <div class="progress-bar"
+                 role="progressbar"
+                 style="width: @(PlcConnector.Entry.Plc.MAIN.progressBar.testInteger.Cyclic / 10)%"
+                 aria-valuenow="@PlcConnector.Entry.Plc.MAIN.progressBar.testInteger.Cyclic"
+                 aria-valuemin="0"
+                 aria-valuemax="100"></div>
+        </div>
+        <div class="d-flex bd-highlight mb-3">
+            <div class="bd-highlight">0</div>
+            <div class="ms-auto bd-highlight">1000</div>
+        </div>
+        <button class="btn btn-primary mt-5"
+                @onclick="Reset">
+            Reset
+        </button>
+    </div>
+    </div>
+
+
+    @code {
+
+        private void Reset()
+        {
+            PlcConnector.Entry.Plc.MAIN.progressBar.testInteger.Cyclic = 0;
+        }
+
+        protected override void OnInitialized()
+        {
+            UpdateValuesOnChange(PlcConnector.Entry.Plc.MAIN.progressBar);
+            base.OnInitialized();
+        }
+    }
