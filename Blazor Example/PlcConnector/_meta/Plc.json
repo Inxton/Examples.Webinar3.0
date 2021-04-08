@@ -32,13 +32,19 @@
     },
     {
       "TypeAttributes": "\n{attribute addProperty Name \"\" }",
-      "TypeName": "stProgressBar",
+      "TypeName": "stProduction",
       "Namespace": "Plc",
       "TypeMetaInfo": 1
     },
     {
       "TypeAttributes": "\n{attribute addProperty Name \"\" }",
       "TypeName": "stStations",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stNested",
       "Namespace": "Plc",
       "TypeMetaInfo": 1
     },

@@ -8,26 +8,44 @@ VAR
 	{attribute addProperty Name "<#Hello#> <#World#>"}
 	Hello_World : STRING;
 	
-	{attribute wpf [RenderIgnore()]}
-	progressBar: stProgressBar;
+    stations : stStations;
 	
-	stations : stStations;
+	production : stProduction;
+	
+	
+
 	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[Hello_World := 'This is automatically generated UI!' ;
-IF progressBar.testBool = TRUE THEN
-	progressBar.testInteger := progressBar.testInteger + 1;
-	IF progressBar.testInteger = 1000 THEN
-		progressBar.testBool := FALSE; 
+IF production.progress_bar_status = TRUE THEN
+	production.progress_bar_value := production.progress_bar_value + 1;
+	
+	IF production.progress_bar_value MOD 10 = 0 THEN
+		production.ok_pieces := production.ok_pieces + 1 ;
+	END_IF
+	
+	IF production.progress_bar_value MOD 100 = 0 THEN
+		production.nok_pieces := production.nok_pieces + 1 ;
+	END_IF
+	IF production.progress_bar_value = 1000 THEN
+		production.progress_bar_status := FALSE; 
+		
 	END_IF
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
       <LineId Id="42" Count="1" />
-      <LineId Id="45" Count="2" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="69" Count="1" />
+      <LineId Id="75" Count="1" />
+      <LineId Id="72" Count="1" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="45" Count="1" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="47" Count="0" />
       <LineId Id="44" Count="0" />
     </LineIds>
   </POU>

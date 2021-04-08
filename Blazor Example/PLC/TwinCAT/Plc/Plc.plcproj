@@ -42,10 +42,13 @@
     <Compile Include="POUs\Stations\stStationCu4.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\stProgressBar.TcDUT">
+    <Compile Include="POUs\stProduction.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\stStations.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Test\stNested.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Test\stTestEnum.TcDUT">

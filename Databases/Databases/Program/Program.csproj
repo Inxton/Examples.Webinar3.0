@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\HansPlcConnector\HansPlcConnector.csproj" />
+		<PackageReference Include="CsvHelper" Version="26.1.0" />
+		<PackageReference Include="MongoDB.Driver" Version="2.11.6" />
+		<PackageReference Include="InfluxDB.Net.Core" Version="1.1.22-beta" />
+		<PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.9.3" />
+	</ItemGroup>
+
+</Project>
