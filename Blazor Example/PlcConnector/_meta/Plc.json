@@ -1,0 +1,54 @@
+{
+  "Types": [
+    {
+      "TypeAttributes": "",
+      "TypeName": "stTestEnum",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 5
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stStationCu1",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stStationCu2",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stStationCu3",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stStationCu4",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stProgressBar",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stStations",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "MAIN",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 3
+    }
+  ],
+  "Name": "Plc",
+  "Namespace": "Plc"
+}

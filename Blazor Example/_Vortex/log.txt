@@ -1,0 +1,13 @@
+2021-04-07 15:21:25.038 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-07 15:21:25.517 +02:00 [WRN] >>>>>>"W","","Config file D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\_Vortex\vortex_config.json does not exists. Creating default one with defaults.","","","0","0"
+2021-04-07 15:21:31.894 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-07 15:21:31.990 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-07 15:21:34.131 +02:00 [INF] >>>>>>I, Done
+2021-04-07 15:22:54.954 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-07 15:22:58.614 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-07 15:22:58.710 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-07 15:23:00.892 +02:00 [INF] >>>>>>I, Done
+2021-04-07 15:23:46.130 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-07 15:23:49.471 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-07 15:23:49.581 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-07 15:23:51.500 +02:00 [INF] >>>>>>I, Done

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <DUT Name="stTestEnum" Id="{3e5dc060-1a2a-410e-9fb7-8c01070decc0}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE stTestEnum :
+(
+	Unknown := 0,
+	Available := 1,
+	UnAvailable := 2	
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

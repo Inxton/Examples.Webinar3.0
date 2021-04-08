@@ -1,0 +1,43 @@
+﻿
+@page "/"
+
+
+
+
+
+@if (IsOn)
+{
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <RenderableContentControl Context="PlcConnector.Entry.Plc.MAIN.stations"
+                              Presentation="Vortex.Presentation.Blazor.Enums.PresentationType.Control">
+
+    </RenderableContentControl>
+</div>
+}
+else
+{
+<div class="p-5 mb-4 bg-light rounded-3 shadow">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Hello, world!</h1>
+        <p class="col-md-8 fs-4">This is InxtonBlazor! An example application to demonstrate possibilities with Blazor connected directly to PLC with experimental support of automatic generation of UI.</p>
+        <button class="btn btn-primary btn-lg" type="button" @onclick="Generate">Click me to generate UI!</button>
+    </div>
+</div>
+
+}
+
+
+
+
+
+@code {
+
+
+
+    private bool IsOn { get; set; }
+
+    private void Generate()
+    {
+        IsOn = true;
+    }
+}

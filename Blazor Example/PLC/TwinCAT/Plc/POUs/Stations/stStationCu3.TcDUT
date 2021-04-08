@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <DUT Name="stStationCu3" Id="{5967a88f-2666-0b33-06b4-e86bf7091bba}">
+    <Declaration><![CDATA[TYPE stStationCu3 :
+STRUCT
+	{attribute addProperty Name "Name"}
+	Name : STRING := 'Station 3';
+	{attribute addProperty Name "Station status"}
+	Cu1Enum : stTestEnum;
+	{attribute addProperty Name "Time"}
+	TimeOfDay: TIME_OF_DAY;
+	{attribute addProperty Name "Date"}
+    TestDate : DATE;	 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
