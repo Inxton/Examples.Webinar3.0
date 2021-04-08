@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="TcOpen.TcoPneumaticsConnector" Version="0.4.0-PullRequest0013.226" />
+    <PackageReference Include="TcOpen.TcoPneumaticsConnector" Version="0.4.0-PullRequest0013.229" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Localizations.Designer.cs">

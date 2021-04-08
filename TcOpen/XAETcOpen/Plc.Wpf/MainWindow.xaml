@@ -1,14 +1,107 @@
-﻿<Window x:Class="Plc.Wpf.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Plc.Wpf"
-        mc:Ignorable="d"
-        xmlns:plc="clr-namespace:PlcConnector;assembly=PlcConnector" xmlns:vortex="http://vortex.mts/xaml"
-        Title="MainWindow" Height="450" Width="800"
-        DataContext="{x:Static plc:Entry.PlcController}">
+﻿<Window
+    x:Class="Plc.Wpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:inxton="http://inxton.mts/xaml"
+    xmlns:local="clr-namespace:Plc.Wpf"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:plc="clr-namespace:PlcConnector;assembly=PlcConnector"
+    xmlns:vortex="http://vortex.mts/xaml"
+    Width="800"
+    Height="600"
+    mc:Ignorable="d"
+    Background="{DynamicResource MaterialDesignPaper}"
+    DataContext="{x:Static plc:Entry.PlcController}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    TextElement.FontSize="13"
+    TextElement.FontWeight="Regular"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    Title="MainWindow">
     <Grid>
-        <vortex:RenderableContentControl DataContext="{Binding MAIN, Mode=OneWay}" PresentationType="Base-Control"></vortex:RenderableContentControl>
+        <TabControl>
+            <TabItem Header="Sequencer">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="400" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:Card
+                        Grid.Row="0"
+                        Margin="5"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                        Padding="25">
+                        <Grid IsSharedSizeScope="true">
+                            <vortex:RenderableContentControl DataContext="{Binding MAIN._station001._sequence._currentStep}" PresentationType="DisplaySlim" />
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card
+                        Grid.Row="1"
+                        Margin="5"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                        Padding="25">
+                        <WrapPanel Margin="10" HorizontalAlignment="Center">
+                            <CheckBox
+                                Margin="3"
+                                Content="Step mode"
+                                IsChecked="{Binding MAIN._station001._sequence._switchToStep.Cyclic}" />
+                            <Button Margin="3" Click="StepBackward_Click">Step --</Button>
+                            <Button Margin="3" Click="StepIn_Click">Step In</Button>
+                            <Button Margin="3" Click="StepForward_Click">Step ++</Button>
+                        </WrapPanel>
+                    </materialDesign:Card>
+                    <materialDesign:Card
+                        Grid.Row="2"
+                        Margin="5"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                        Padding="2">
+                        <GroupBox Grid.Row="2" Header="Simulation delay">
+                            <Slider
+                                Value="{Binding MAIN._station001._sequence._simTimerValue.Cyclic}"
+                                Maximum="5000"
+                                Minimum="50"
+                                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                                TickFrequency="50"
+                                TickPlacement="TopLeft" />
+                        </GroupBox>
+                    </materialDesign:Card>
+                    <materialDesign:Card
+                        Grid.Row="3"
+                        Margin="25"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32">
+                        <Image
+                            x:Name="imageBox"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </materialDesign:Card>
+                    <CheckBox Grid.Row="4" IsChecked="{Binding  MAIN._station001._sequence._failedToLoad.Cyclic}">Simulate failed to load</CheckBox>
+                    <materialDesign:Card Grid.Row="5">
+                        <StackPanel>
+                            <Expander HorizontalAlignment="Stretch" Header="Messages">
+                                <StackPanel
+                                    Margin="24,8,24,16"
+                                    Orientation="Vertical"
+                                    TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                    <inxton:TcoDiagnosticsView x:Name="DiagnosticsView"  />
+                                    <TextBlock Style="{DynamicResource HorizontalExpanderContentTextBlock}" />
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
+                    </materialDesign:Card>
+                   
+                </Grid>
+            </TabItem>
+            <TabItem Header="Autogen">
+                <vortex:RenderableContentControl DataContext="{Binding MAIN, Mode=OneWay}" PresentationType="Base-Control" />
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

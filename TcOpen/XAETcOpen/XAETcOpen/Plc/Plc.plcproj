@@ -23,6 +23,12 @@
     <Author>TcOpenGroup</Author>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Components\fbPiston.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\fbPistonMoveTask.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -32,10 +38,14 @@
     <Compile Include="POUs\Station001.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\Station001_Sequencer.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
+    <Folder Include="Components" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
@@ -53,20 +63,20 @@
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="TcoCore">
-      <DefaultResolution>TcoCore, 0.4.0.226 (Vortex.Library)</DefaultResolution>
+      <DefaultResolution>TcoCore, 0.4.0.229 (Vortex.Library)</DefaultResolution>
       <Namespace>TcoCore</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="TcoPneumatics">
-      <DefaultResolution>TcoPneumatics, 0.4.0.226 (Vortex.Library)</DefaultResolution>
+      <DefaultResolution>TcoPneumatics, 0.4.0.229 (Vortex.Library)</DefaultResolution>
       <Namespace>TcoPneumatics</Namespace>
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="TcoCore">
-      <Resolution>TcoCore, 0.4.0.226 (Vortex.Library)</Resolution>
+      <Resolution>TcoCore, 0.4.0.229 (Vortex.Library)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="TcoPneumatics">
-      <Resolution>TcoPneumatics, 0.4.0.226 (Vortex.Library)</Resolution>
+      <Resolution>TcoPneumatics, 0.4.0.229 (Vortex.Library)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
   <ItemGroup>
