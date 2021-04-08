@@ -1,0 +1,14 @@
+﻿<Window x:Class="Plc.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Plc.Wpf"
+        mc:Ignorable="d"
+        xmlns:plc="clr-namespace:PlcConnector;assembly=PlcConnector" xmlns:vortex="http://vortex.mts/xaml"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{x:Static plc:Entry.PlcController}">
+    <Grid>
+        <vortex:RenderableContentControl DataContext="{Binding MAIN, Mode=OneWay}" PresentationType="Base-Control"></vortex:RenderableContentControl>
+    </Grid>
+</Window>

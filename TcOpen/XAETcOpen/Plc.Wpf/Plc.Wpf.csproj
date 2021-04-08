@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Inxton.Package.Vortex.Essentials.Wpf" Version="1.9.6-nightly.261" />
+    <PackageReference Include="TcOpen.TcoPneumatics.Wpf" Version="0.4.0-PullRequest0013.226" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlcConnector\PlcConnector.csproj" />
+  </ItemGroup>
+
+</Project>
