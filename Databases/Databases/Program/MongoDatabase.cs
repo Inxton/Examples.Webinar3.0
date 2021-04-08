@@ -25,9 +25,10 @@ namespace Program
 
         public void Write(T data)
         {
-            (((dynamic)data).id) = ObjectId.GenerateNewId();
-            (((dynamic)data).TimeStamp) = DateTime.Now;
+            ((dynamic)data).id = ObjectId.GenerateNewId();
+            ((dynamic)data).TimeStamp = DateTime.Now;
             Collection.InsertOne(data);
+            ((dynamic)data).id = null;
         }
 
         private void MapSerializer()

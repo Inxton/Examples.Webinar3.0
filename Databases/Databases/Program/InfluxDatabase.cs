@@ -11,13 +11,11 @@ namespace Program
     {
         const string ServerUrl = "http://localhost:8086/";
         const string DatabaseName = "ws";
-        private static IEnumerable<IValueTag> Primitives;
         private InfluxDb Client { get; set; }
         public InfluxDatabase()
         {
             Client = new InfluxDb(ServerUrl, "root", "root");
             Task.Run(SetupInflux);
-
         }
 
         private async void SetupInflux()
@@ -40,12 +38,7 @@ namespace Program
                     point.Fields[property.Name] = value;
             }
 
-            Task.Run(async () =>
-            {
-                ;
-                var x = await Client.WriteAsync(DatabaseName, point);
-                ;
-            });
+            Task.Run(async () => await Client.WriteAsync(DatabaseName, point));
         }
 
     }
