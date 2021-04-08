@@ -56,6 +56,31 @@ namespace Plc
 			}
 		}
 
+		Vortex.Connector.ValueTypes.OnlinerBool _IsOn;
+		public Vortex.Connector.ValueTypes.OnlinerBool IsOn
+		{
+			get
+			{
+				return _IsOn;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Online.IOnlineBool IstStationCu2.IsOn
+		{
+			get
+			{
+				return IsOn;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Shadows.IShadowBool IShadowstStationCu2.IsOn
+		{
+			get
+			{
+				return IsOn;
+			}
+		}
+
 		Vortex.Connector.ValueTypes.OnlinerInt _Cu1Enum;
 		[Vortex.Connector.EnumeratorDiscriminatorAttribute(typeof (stTestEnum))]
 		public Vortex.Connector.ValueTypes.OnlinerInt Cu1Enum
@@ -134,30 +159,64 @@ namespace Plc
 			}
 		}
 
+		stNested _Complex;
+		[Container(Layout.Wrap)]
+		public stNested Complex
+		{
+			get
+			{
+				return _Complex;
+			}
+		}
+
+		[Container(Layout.Wrap)]
+		IstNested IstStationCu2.Complex
+		{
+			get
+			{
+				return Complex;
+			}
+		}
+
+		[Container(Layout.Wrap)]
+		IShadowstNested IShadowstStationCu2.Complex
+		{
+			get
+			{
+				return Complex;
+			}
+		}
+
 		public void LazyOnlineToShadow()
 		{
 			Name.Shadow = Name.LastValue;
+			IsOn.Shadow = IsOn.LastValue;
 			Cu1Enum.Shadow = Cu1Enum.LastValue;
 			TimeOfDay.Shadow = TimeOfDay.LastValue;
 			TestDate.Shadow = TestDate.LastValue;
+			Complex.LazyOnlineToShadow();
 		}
 
 		public void LazyShadowToOnline()
 		{
 			Name.Cyclic = Name.Shadow;
+			IsOn.Cyclic = IsOn.Shadow;
 			Cu1Enum.Cyclic = Cu1Enum.Shadow;
 			TimeOfDay.Cyclic = TimeOfDay.Shadow;
 			TestDate.Cyclic = TestDate.Shadow;
+			Complex.LazyShadowToOnline();
 		}
 
 		public PlainstStationCu2 CreatePlainerType()
 		{
 			var cloned = new PlainstStationCu2();
+			cloned.Complex = Complex.CreatePlainerType();
 			return cloned;
 		}
 
 		protected PlainstStationCu2 CreatePlainerType(PlainstStationCu2 cloned)
 		{
+			cloned.Complex = Complex.CreatePlainerType();
 			return cloned;
 		}
 
@@ -307,12 +366,16 @@ namespace Plc
 			Symbol = Vortex.Connector.IConnector.CreateSymbol(parent.Symbol, symbolTail);
 			_Name = @Connector.Online.Adapter.CreateSTRING(this, "Name", "Name");
 			Name.AttributeName = "Name";
+			_IsOn = @Connector.Online.Adapter.CreateBOOL(this, "Is On", "IsOn");
+			IsOn.AttributeName = "Is On";
 			_Cu1Enum = @Connector.Online.Adapter.CreateINT(this, "Station status", "Cu1Enum");
 			Cu1Enum.AttributeName = "Station status";
 			_TimeOfDay = @Connector.Online.Adapter.CreateTIME_OF_DAY(this, "Time", "TimeOfDay");
 			TimeOfDay.AttributeName = "Time";
 			_TestDate = @Connector.Online.Adapter.CreateDATE(this, "Date", "TestDate");
 			TestDate.AttributeName = "Date";
+			_Complex = new stNested(this, "Nested Element", "Complex");
+			_Complex.AttributeName = "Nested Element";
 			AttributeName = "";
 			parent.AddChild(this);
 			parent.AddKid(this);
@@ -324,12 +387,16 @@ namespace Plc
 			PexPreConstructorParameterless();
 			_Name = Vortex.Connector.IConnectorFactory.CreateSTRING();
 			Name.AttributeName = "Name";
+			_IsOn = Vortex.Connector.IConnectorFactory.CreateBOOL();
+			IsOn.AttributeName = "Is On";
 			_Cu1Enum = Vortex.Connector.IConnectorFactory.CreateINT();
 			Cu1Enum.AttributeName = "Station status";
 			_TimeOfDay = Vortex.Connector.IConnectorFactory.CreateTIME_OF_DAY();
 			TimeOfDay.AttributeName = "Time";
 			_TestDate = Vortex.Connector.IConnectorFactory.CreateDATE();
 			TestDate.AttributeName = "Date";
+			_Complex = new stNested();
+			_Complex.AttributeName = "Nested Element";
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -338,9 +405,11 @@ namespace Plc
 		protected abstract class PlcstStationCu2
 		{
 			public object Name;
+			public object IsOn;
 			public System.Int16 Cu1Enum;
 			public object TimeOfDay;
 			public object TestDate;
+			public PlainstNested Complex;
 			///<summary>Prevents creating instance of this class via public constructor</summary><exclude/>
 			protected PlcstStationCu2()
 			{
@@ -360,6 +429,11 @@ namespace Plc
 			get;
 		}
 
+		Vortex.Connector.ValueTypes.Online.IOnlineBool IsOn
+		{
+			get;
+		}
+
 		[Vortex.Connector.EnumeratorDiscriminatorAttribute(typeof (stTestEnum))]
 		Vortex.Connector.ValueTypes.Online.IOnlineInt Cu1Enum
 		{
@@ -372,6 +446,12 @@ namespace Plc
 		}
 
 		Vortex.Connector.ValueTypes.Online.IOnlineDate TestDate
+		{
+			get;
+		}
+
+		[Container(Layout.Wrap)]
+		IstNested Complex
 		{
 			get;
 		}
@@ -399,6 +479,11 @@ namespace Plc
 			get;
 		}
 
+		Vortex.Connector.ValueTypes.Shadows.IShadowBool IsOn
+		{
+			get;
+		}
+
 		[Vortex.Connector.EnumeratorDiscriminatorAttribute(typeof (stTestEnum))]
 		Vortex.Connector.ValueTypes.Shadows.IShadowInt Cu1Enum
 		{
@@ -411,6 +496,12 @@ namespace Plc
 		}
 
 		Vortex.Connector.ValueTypes.Shadows.IShadowDate TestDate
+		{
+			get;
+		}
+
+		[Container(Layout.Wrap)]
+		IShadowstNested Complex
 		{
 			get;
 		}
@@ -446,6 +537,24 @@ namespace Plc
 				{
 					_Name = value;
 					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Name)));
+				}
+			}
+		}
+
+		System.Boolean _IsOn;
+		public System.Boolean IsOn
+		{
+			get
+			{
+				return _IsOn;
+			}
+
+			set
+			{
+				if (_IsOn != value)
+				{
+					_IsOn = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(IsOn)));
 				}
 			}
 		}
@@ -505,12 +614,33 @@ namespace Plc
 			}
 		}
 
+		PlainstNested _Complex;
+		[Container(Layout.Wrap)]
+		public PlainstNested Complex
+		{
+			get
+			{
+				return _Complex;
+			}
+
+			set
+			{
+				if (_Complex != value)
+				{
+					_Complex = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Complex)));
+				}
+			}
+		}
+
 		public void CopyPlainToCyclic(Plc.stStationCu2 target)
 		{
 			target.Name.Cyclic = Name;
+			target.IsOn.Cyclic = IsOn;
 			target.Cu1Enum.Cyclic = Cu1Enum;
 			target.TimeOfDay.Cyclic = TimeOfDay;
 			target.TestDate.Cyclic = TestDate;
+			Complex.CopyPlainToCyclic(target.Complex);
 		}
 
 		public void CopyPlainToCyclic(Plc.IstStationCu2 target)
@@ -521,9 +651,11 @@ namespace Plc
 		public void CopyPlainToShadow(Plc.stStationCu2 target)
 		{
 			target.Name.Shadow = Name;
+			target.IsOn.Shadow = IsOn;
 			target.Cu1Enum.Shadow = Cu1Enum;
 			target.TimeOfDay.Shadow = TimeOfDay;
 			target.TestDate.Shadow = TestDate;
+			Complex.CopyPlainToShadow(target.Complex);
 		}
 
 		public void CopyPlainToShadow(Plc.IShadowstStationCu2 target)
@@ -534,9 +666,11 @@ namespace Plc
 		public void CopyCyclicToPlain(Plc.stStationCu2 source)
 		{
 			Name = source.Name.LastValue;
+			IsOn = source.IsOn.LastValue;
 			Cu1Enum = source.Cu1Enum.LastValue;
 			TimeOfDay = source.TimeOfDay.LastValue;
 			TestDate = source.TestDate.LastValue;
+			Complex.CopyCyclicToPlain(source.Complex);
 		}
 
 		public void CopyCyclicToPlain(Plc.IstStationCu2 source)
@@ -547,9 +681,11 @@ namespace Plc
 		public void CopyShadowToPlain(Plc.stStationCu2 source)
 		{
 			Name = source.Name.Shadow;
+			IsOn = source.IsOn.Shadow;
 			Cu1Enum = source.Cu1Enum.Shadow;
 			TimeOfDay = source.TimeOfDay.Shadow;
 			TestDate = source.TestDate.Shadow;
+			Complex.CopyShadowToPlain(source.Complex);
 		}
 
 		public void CopyShadowToPlain(Plc.IShadowstStationCu2 source)
@@ -560,6 +696,7 @@ namespace Plc
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainstStationCu2()
 		{
+			_Complex = new PlainstNested();
 		}
 	}
 }

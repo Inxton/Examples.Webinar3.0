@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <DUT Name="stNested" Id="{aa801c5f-eb15-0419-0182-555df9d9606c}">
+    <Declaration><![CDATA[TYPE stNested :
+STRUCT
+	{attribute addProperty Name "Name"}
+	Name : STRING;
+	{attribute addProperty Name "Turn on nested station"}
+	NestedOn : BOOL;	
+	{attribute addProperty Name "Date and Time"}
+	TestDateTime : DATE_AND_TIME;	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

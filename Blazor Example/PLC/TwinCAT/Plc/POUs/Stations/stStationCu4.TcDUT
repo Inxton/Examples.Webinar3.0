@@ -5,6 +5,8 @@
 STRUCT
 	{attribute addProperty Name "Name"}
 	Name : STRING := 'Station 4';
+	{attribute addProperty Name "Is On"}	
+    IsOn : BOOL;
 	{attribute addProperty Name "Station status"}
 	Cu1Enum : stTestEnum;
 	{attribute addProperty Name "Time"}

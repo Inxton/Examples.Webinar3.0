@@ -5,12 +5,20 @@
 STRUCT
 	{attribute addProperty Name "Name"}
 	Name : STRING := 'Station 1';
+	{attribute addProperty Name "Is On"}	
+    IsOn : BOOL := TRUE;
 	{attribute addProperty Name "Station status"}
 	Cu1Enum : stTestEnum;
 	{attribute addProperty Name "Time"}
 	TimeOfDay: TIME_OF_DAY;
 	{attribute addProperty Name "Date"}
-    TestDate : DATE;	 
+    TestDate : DATE;	
+	{attribute addProperty Name "Nested Station 1"}
+	{attribute wpf [Container(Layout.Wrap)]}
+	NestedFirst : stNested := (Name:='Nested Station 1', NestedOn := TRUE); 
+	{attribute addProperty Name "Nested Station 2"}
+	{attribute wpf [Container(Layout.Wrap)]}
+	NestedSecond : stNested := (Name:='Nested Station 2'); 
 END_STRUCT
 END_TYPE
 ]]></Declaration>

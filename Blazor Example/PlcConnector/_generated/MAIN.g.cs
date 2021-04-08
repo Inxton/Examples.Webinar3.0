@@ -56,34 +56,6 @@ namespace Plc
 			}
 		}
 
-		stProgressBar _progressBar;
-		[RenderIgnore()]
-		public stProgressBar progressBar
-		{
-			get
-			{
-				return _progressBar;
-			}
-		}
-
-		[RenderIgnore()]
-		IstProgressBar IMAIN.progressBar
-		{
-			get
-			{
-				return progressBar;
-			}
-		}
-
-		[RenderIgnore()]
-		IShadowstProgressBar IShadowMAIN.progressBar
-		{
-			get
-			{
-				return progressBar;
-			}
-		}
-
 		stStations _stations;
 		public stStations stations
 		{
@@ -109,32 +81,57 @@ namespace Plc
 			}
 		}
 
+		stProduction _production;
+		public stProduction production
+		{
+			get
+			{
+				return _production;
+			}
+		}
+
+		IstProduction IMAIN.production
+		{
+			get
+			{
+				return production;
+			}
+		}
+
+		IShadowstProduction IShadowMAIN.production
+		{
+			get
+			{
+				return production;
+			}
+		}
+
 		public void LazyOnlineToShadow()
 		{
 			Hello_World.Shadow = Hello_World.LastValue;
-			progressBar.LazyOnlineToShadow();
 			stations.LazyOnlineToShadow();
+			production.LazyOnlineToShadow();
 		}
 
 		public void LazyShadowToOnline()
 		{
 			Hello_World.Cyclic = Hello_World.Shadow;
-			progressBar.LazyShadowToOnline();
 			stations.LazyShadowToOnline();
+			production.LazyShadowToOnline();
 		}
 
 		public PlainMAIN CreatePlainerType()
 		{
 			var cloned = new PlainMAIN();
-			cloned.progressBar = progressBar.CreatePlainerType();
 			cloned.stations = stations.CreatePlainerType();
+			cloned.production = production.CreatePlainerType();
 			return cloned;
 		}
 
 		protected PlainMAIN CreatePlainerType(PlainMAIN cloned)
 		{
-			cloned.progressBar = progressBar.CreatePlainerType();
 			cloned.stations = stations.CreatePlainerType();
+			cloned.production = production.CreatePlainerType();
 			return cloned;
 		}
 
@@ -284,8 +281,8 @@ namespace Plc
 			Symbol = Vortex.Connector.IConnector.CreateSymbol(parent.Symbol, symbolTail);
 			_Hello_World = @Connector.Online.Adapter.CreateSTRING(this, "<#Hello#> <#World#>", "Hello_World");
 			Hello_World.AttributeName = "<#Hello#> <#World#>";
-			_progressBar = new stProgressBar(this, "", "progressBar");
 			_stations = new stStations(this, "", "stations");
+			_production = new stProduction(this, "", "production");
 			AttributeName = "";
 			parent.AddChild(this);
 			parent.AddKid(this);
@@ -297,8 +294,8 @@ namespace Plc
 			PexPreConstructorParameterless();
 			_Hello_World = Vortex.Connector.IConnectorFactory.CreateSTRING();
 			Hello_World.AttributeName = "<#Hello#> <#World#>";
-			_progressBar = new stProgressBar();
 			_stations = new stStations();
+			_production = new stProduction();
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -307,8 +304,8 @@ namespace Plc
 		protected abstract class PlcMAIN
 		{
 			public object Hello_World;
-			public PlainstProgressBar progressBar;
 			public PlainstStations stations;
+			public PlainstProduction production;
 			///<summary>Prevents creating instance of this class via public constructor</summary><exclude/>
 			protected PlcMAIN()
 			{
@@ -328,13 +325,12 @@ namespace Plc
 			get;
 		}
 
-		[RenderIgnore()]
-		IstProgressBar progressBar
+		IstStations stations
 		{
 			get;
 		}
 
-		IstStations stations
+		IstProduction production
 		{
 			get;
 		}
@@ -362,13 +358,12 @@ namespace Plc
 			get;
 		}
 
-		[RenderIgnore()]
-		IShadowstProgressBar progressBar
+		IShadowstStations stations
 		{
 			get;
 		}
 
-		IShadowstStations stations
+		IShadowstProduction production
 		{
 			get;
 		}
@@ -408,25 +403,6 @@ namespace Plc
 			}
 		}
 
-		PlainstProgressBar _progressBar;
-		[RenderIgnore()]
-		public PlainstProgressBar progressBar
-		{
-			get
-			{
-				return _progressBar;
-			}
-
-			set
-			{
-				if (_progressBar != value)
-				{
-					_progressBar = value;
-					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(progressBar)));
-				}
-			}
-		}
-
 		PlainstStations _stations;
 		public PlainstStations stations
 		{
@@ -445,11 +421,29 @@ namespace Plc
 			}
 		}
 
+		PlainstProduction _production;
+		public PlainstProduction production
+		{
+			get
+			{
+				return _production;
+			}
+
+			set
+			{
+				if (_production != value)
+				{
+					_production = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(production)));
+				}
+			}
+		}
+
 		public void CopyPlainToCyclic(Plc.MAIN target)
 		{
 			target.Hello_World.Cyclic = Hello_World;
-			progressBar.CopyPlainToCyclic(target.progressBar);
 			stations.CopyPlainToCyclic(target.stations);
+			production.CopyPlainToCyclic(target.production);
 		}
 
 		public void CopyPlainToCyclic(Plc.IMAIN target)
@@ -460,8 +454,8 @@ namespace Plc
 		public void CopyPlainToShadow(Plc.MAIN target)
 		{
 			target.Hello_World.Shadow = Hello_World;
-			progressBar.CopyPlainToShadow(target.progressBar);
 			stations.CopyPlainToShadow(target.stations);
+			production.CopyPlainToShadow(target.production);
 		}
 
 		public void CopyPlainToShadow(Plc.IShadowMAIN target)
@@ -472,8 +466,8 @@ namespace Plc
 		public void CopyCyclicToPlain(Plc.MAIN source)
 		{
 			Hello_World = source.Hello_World.LastValue;
-			progressBar.CopyCyclicToPlain(source.progressBar);
 			stations.CopyCyclicToPlain(source.stations);
+			production.CopyCyclicToPlain(source.production);
 		}
 
 		public void CopyCyclicToPlain(Plc.IMAIN source)
@@ -484,8 +478,8 @@ namespace Plc
 		public void CopyShadowToPlain(Plc.MAIN source)
 		{
 			Hello_World = source.Hello_World.Shadow;
-			progressBar.CopyShadowToPlain(source.progressBar);
 			stations.CopyShadowToPlain(source.stations);
+			production.CopyShadowToPlain(source.production);
 		}
 
 		public void CopyShadowToPlain(Plc.IShadowMAIN source)
@@ -496,8 +490,8 @@ namespace Plc
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainMAIN()
 		{
-			_progressBar = new PlainstProgressBar();
 			_stations = new PlainstStations();
+			_production = new PlainstProduction();
 		}
 	}
 }

@@ -16,3 +16,69 @@
 2021-04-07 15:23:48.092 +02:00 [INF] Updating project Plc.Plc
 2021-04-07 15:23:51.455 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
 2021-04-07 15:23:51.458 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 13:04:14.795 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 13:04:15.285 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 13:04:17.600 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 13:04:17.893 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 13:04:21.132 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 13:04:21.138 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 13:11:21.707 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 13:11:22.051 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 13:11:22.758 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 13:11:22.999 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 13:11:26.299 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 13:11:26.302 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:01:23.261 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:01:23.613 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:01:24.303 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:01:24.547 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:01:27.822 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:01:27.825 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:29:16.769 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:29:17.156 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:29:17.898 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:29:18.150 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:29:21.517 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:29:21.525 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:34:59.174 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:34:59.546 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:35:00.275 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:35:00.512 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:35:03.887 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:35:03.894 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:35:33.861 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:35:34.207 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:35:34.916 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:35:35.151 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:35:38.496 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:35:38.498 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:37:36.028 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:37:36.397 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:37:37.156 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:37:37.395 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:37:40.767 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:37:40.769 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:42:42.419 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:42:42.784 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:42:43.486 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:42:43.716 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:42:46.942 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:42:46.945 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:45:58.209 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:45:58.638 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:45:59.388 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:45:59.624 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:46:03.152 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:46:03.156 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:48:17.998 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:48:18.390 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:48:19.177 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:48:19.430 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:48:22.810 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:48:22.813 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 14:48:51.956 +02:00 [INF] Opening solution: D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 14:48:52.303 +02:00 [INF] Loading dependency tree for project 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 14:48:53.035 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 14:48:53.282 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 14:48:56.662 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 14:48:56.665 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
