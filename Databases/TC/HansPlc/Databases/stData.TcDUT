@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <DUT Name="stData" Id="{9ca7c212-2291-4b41-b8a7-9f51dddb56be}">
+    <Declaration><![CDATA[TYPE stData :
+STRUCT
+	CycleCount : UDINT;
+	CycleTime : UDINT;
+	LastExecTime: UDINT;
+	Minimum : UDINT := 0;
+	Maximum : UDINT := 4294967295;	
+//	DateTime : DATE;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
