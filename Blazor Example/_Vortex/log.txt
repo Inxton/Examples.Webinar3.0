@@ -11,3 +11,49 @@
 2021-04-07 15:23:49.471 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
 2021-04-07 15:23:49.581 +02:00 [INF] Compiling sources 'Plc'...
 2021-04-07 15:23:51.500 +02:00 [INF] >>>>>>I, Done
+2021-04-08 13:04:11.131 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 13:04:19.219 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 13:04:19.307 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 13:04:21.213 +02:00 [INF] >>>>>>I, Done
+2021-04-08 13:11:21.094 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 13:11:24.432 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 13:11:24.517 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 13:11:26.355 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:01:22.595 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:01:25.857 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:01:25.947 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:01:27.883 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:29:16.094 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:29:19.574 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:29:19.663 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:29:21.583 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:34:58.535 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:35:01.903 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:35:01.989 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:35:03.948 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:35:33.227 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:35:36.505 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:35:36.597 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:35:38.551 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:37:35.396 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:37:38.725 +02:00 [WRN] >>>>>>"W","","Type 'String' declared in 'Plc.stCu2Nested' is unknown it won't be used. If the type should be known check the reference; letter casing of the type identifier; correct namespace in which the type is located","Plc","stCu2Nested","0","0"
+2021-04-08 14:37:38.786 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:37:38.887 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:37:40.831 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:42:41.794 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:42:44.977 +02:00 [WRN] >>>>>>"W","","Type 'String' declared in 'Plc.stCu2Nested' is unknown it won't be used. If the type should be known check the reference; letter casing of the type identifier; correct namespace in which the type is located","Plc","stCu2Nested","0","0"
+2021-04-08 14:42:45.035 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:42:45.122 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:42:46.999 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:45:57.554 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:46:01.067 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:46:01.169 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:46:03.239 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:48:17.370 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:48:20.792 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:48:20.878 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:48:22.877 +02:00 [INF] >>>>>>I, Done
+2021-04-08 14:48:51.319 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 14:48:54.674 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 14:48:54.765 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 14:48:56.719 +02:00 [INF] >>>>>>I, Done

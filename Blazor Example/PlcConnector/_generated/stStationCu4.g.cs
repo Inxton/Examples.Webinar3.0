@@ -56,6 +56,31 @@ namespace Plc
 			}
 		}
 
+		Vortex.Connector.ValueTypes.OnlinerBool _IsOn;
+		public Vortex.Connector.ValueTypes.OnlinerBool IsOn
+		{
+			get
+			{
+				return _IsOn;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Online.IOnlineBool IstStationCu4.IsOn
+		{
+			get
+			{
+				return IsOn;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Shadows.IShadowBool IShadowstStationCu4.IsOn
+		{
+			get
+			{
+				return IsOn;
+			}
+		}
+
 		Vortex.Connector.ValueTypes.OnlinerInt _Cu1Enum;
 		[Vortex.Connector.EnumeratorDiscriminatorAttribute(typeof (stTestEnum))]
 		public Vortex.Connector.ValueTypes.OnlinerInt Cu1Enum
@@ -137,6 +162,7 @@ namespace Plc
 		public void LazyOnlineToShadow()
 		{
 			Name.Shadow = Name.LastValue;
+			IsOn.Shadow = IsOn.LastValue;
 			Cu1Enum.Shadow = Cu1Enum.LastValue;
 			TimeOfDay.Shadow = TimeOfDay.LastValue;
 			TestDate.Shadow = TestDate.LastValue;
@@ -145,6 +171,7 @@ namespace Plc
 		public void LazyShadowToOnline()
 		{
 			Name.Cyclic = Name.Shadow;
+			IsOn.Cyclic = IsOn.Shadow;
 			Cu1Enum.Cyclic = Cu1Enum.Shadow;
 			TimeOfDay.Cyclic = TimeOfDay.Shadow;
 			TestDate.Cyclic = TestDate.Shadow;
@@ -307,6 +334,8 @@ namespace Plc
 			Symbol = Vortex.Connector.IConnector.CreateSymbol(parent.Symbol, symbolTail);
 			_Name = @Connector.Online.Adapter.CreateSTRING(this, "Name", "Name");
 			Name.AttributeName = "Name";
+			_IsOn = @Connector.Online.Adapter.CreateBOOL(this, "Is On", "IsOn");
+			IsOn.AttributeName = "Is On";
 			_Cu1Enum = @Connector.Online.Adapter.CreateINT(this, "Station status", "Cu1Enum");
 			Cu1Enum.AttributeName = "Station status";
 			_TimeOfDay = @Connector.Online.Adapter.CreateTIME_OF_DAY(this, "Time", "TimeOfDay");
@@ -324,6 +353,8 @@ namespace Plc
 			PexPreConstructorParameterless();
 			_Name = Vortex.Connector.IConnectorFactory.CreateSTRING();
 			Name.AttributeName = "Name";
+			_IsOn = Vortex.Connector.IConnectorFactory.CreateBOOL();
+			IsOn.AttributeName = "Is On";
 			_Cu1Enum = Vortex.Connector.IConnectorFactory.CreateINT();
 			Cu1Enum.AttributeName = "Station status";
 			_TimeOfDay = Vortex.Connector.IConnectorFactory.CreateTIME_OF_DAY();
@@ -338,6 +369,7 @@ namespace Plc
 		protected abstract class PlcstStationCu4
 		{
 			public object Name;
+			public object IsOn;
 			public System.Int16 Cu1Enum;
 			public object TimeOfDay;
 			public object TestDate;
@@ -356,6 +388,11 @@ namespace Plc
 	public partial interface IstStationCu4 : Vortex.Connector.IVortexOnlineObject
 	{
 		Vortex.Connector.ValueTypes.Online.IOnlineString Name
+		{
+			get;
+		}
+
+		Vortex.Connector.ValueTypes.Online.IOnlineBool IsOn
 		{
 			get;
 		}
@@ -395,6 +432,11 @@ namespace Plc
 	public partial interface IShadowstStationCu4 : Vortex.Connector.IVortexShadowObject
 	{
 		Vortex.Connector.ValueTypes.Shadows.IShadowString Name
+		{
+			get;
+		}
+
+		Vortex.Connector.ValueTypes.Shadows.IShadowBool IsOn
 		{
 			get;
 		}
@@ -446,6 +488,24 @@ namespace Plc
 				{
 					_Name = value;
 					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Name)));
+				}
+			}
+		}
+
+		System.Boolean _IsOn;
+		public System.Boolean IsOn
+		{
+			get
+			{
+				return _IsOn;
+			}
+
+			set
+			{
+				if (_IsOn != value)
+				{
+					_IsOn = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(IsOn)));
 				}
 			}
 		}
@@ -508,6 +568,7 @@ namespace Plc
 		public void CopyPlainToCyclic(Plc.stStationCu4 target)
 		{
 			target.Name.Cyclic = Name;
+			target.IsOn.Cyclic = IsOn;
 			target.Cu1Enum.Cyclic = Cu1Enum;
 			target.TimeOfDay.Cyclic = TimeOfDay;
 			target.TestDate.Cyclic = TestDate;
@@ -521,6 +582,7 @@ namespace Plc
 		public void CopyPlainToShadow(Plc.stStationCu4 target)
 		{
 			target.Name.Shadow = Name;
+			target.IsOn.Shadow = IsOn;
 			target.Cu1Enum.Shadow = Cu1Enum;
 			target.TimeOfDay.Shadow = TimeOfDay;
 			target.TestDate.Shadow = TestDate;
@@ -534,6 +596,7 @@ namespace Plc
 		public void CopyCyclicToPlain(Plc.stStationCu4 source)
 		{
 			Name = source.Name.LastValue;
+			IsOn = source.IsOn.LastValue;
 			Cu1Enum = source.Cu1Enum.LastValue;
 			TimeOfDay = source.TimeOfDay.LastValue;
 			TestDate = source.TestDate.LastValue;
@@ -547,6 +610,7 @@ namespace Plc
 		public void CopyShadowToPlain(Plc.stStationCu4 source)
 		{
 			Name = source.Name.Shadow;
+			IsOn = source.IsOn.Shadow;
 			Cu1Enum = source.Cu1Enum.Shadow;
 			TimeOfDay = source.TimeOfDay.Shadow;
 			TestDate = source.TestDate.Shadow;
