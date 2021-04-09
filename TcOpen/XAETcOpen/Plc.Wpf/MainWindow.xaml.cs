@@ -29,7 +29,7 @@ namespace Plc.Wpf
         public MainWindow()
         {
             InitializeComponent();
-            dc = new TcoDiagnosticsViewViewModel(Entry.PlcController.MAIN._station001._sequence);
+            dc = new TcoDiagnosticsViewViewModel(Entry.PlcController.MAIN._station001);
             DiagnosticsView.DataContext = dc;                        
             Entry.PlcController.MAIN._station001._sequence._currentStep.ID.Subscribe(ChangeImage);
 
@@ -37,17 +37,32 @@ namespace Plc.Wpf
 
         TcoDiagnosticsViewViewModel dc;
         FileInfo rootPath = new FileInfo(Assembly.GetExecutingAssembly().Location);
+        Dictionary<short, double> scrollPosition = new Dictionary<short, double>() { 
+            {100,0.0},
+            {200,243},
+            {300,483},
+            {400,819},
+            {500,1011},
+            {600,1203},
+            {700,1395},
+            {800,1504}
+        };
         void ChangeImage(IValueTag sender, ValueChangedEventArgs args)
         {
             try
             {
                 dc.UpdateMessagesCommand.Execute(null);
-                var fileName = @$"{rootPath.DirectoryName}\images\{args.NewValue}.png";
+               // var fileName = @$"{rootPath.DirectoryName}\images\{args.NewValue}.png";
+                var fileName = @$"{rootPath.DirectoryName}\images\100-800.png";
                 if (File.Exists(fileName))
                 {
                     this.Dispatcher.Invoke(() =>
                         {
-                            this.imageBox.Source = new BitmapImage(new Uri(fileName));
+                            if(scrollPosition.ContainsKey((dynamic)args.NewValue))
+                            { 
+                                scrollImage.ScrollToVerticalOffset(scrollPosition[(dynamic)args.NewValue]);                         
+                            }
+
                         });
                 }
             }

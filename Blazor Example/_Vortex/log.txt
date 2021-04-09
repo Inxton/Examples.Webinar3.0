@@ -57,3 +57,7 @@
 2021-04-08 14:48:54.674 +02:00 [INF] Emitting files into 'D:\Dado MTS\Blazor Webinar Example\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
 2021-04-08 14:48:54.765 +02:00 [INF] Compiling sources 'Plc'...
 2021-04-08 14:48:56.719 +02:00 [INF] >>>>>>I, Done
+2021-04-08 20:43:09.708 +02:00 [INF] Builder version : 1.9.7.0 / 1.9.7+385.Branch.master.Sha.75bce535c95e3ac498c47f32cc041fa9fc255235
+2021-04-08 20:43:18.119 +02:00 [INF] Emitting files into 'J:\MTS\Develop\GitHub\Inxton\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-08 20:43:18.243 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-08 20:43:19.704 +02:00 [INF] >>>>>>I, Done

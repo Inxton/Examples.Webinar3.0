@@ -82,3 +82,9 @@
 2021-04-08 14:48:53.282 +02:00 [INF] Updating project Plc.Plc
 2021-04-08 14:48:56.662 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
 2021-04-08 14:48:56.665 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-08 20:43:13.248 +02:00 [INF] Opening solution: J:\MTS\Develop\GitHub\Inxton\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-08 20:43:13.893 +02:00 [INF] Loading dependency tree for project 'J:\MTS\Develop\GitHub\Inxton\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-08 20:43:16.496 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-08 20:43:16.752 +02:00 [INF] Updating project Plc.Plc
+2021-04-08 20:43:19.669 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-08 20:43:19.671 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.

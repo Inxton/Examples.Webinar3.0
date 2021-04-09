@@ -29,6 +29,15 @@
     <Compile Include="Components\fbPistonMoveTask.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Components\IPistonHorizontal.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\IPistonVertical.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\IPistonGripper.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +45,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Station001.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Station001_Components.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Station001_Sequencer.TcPOU">
