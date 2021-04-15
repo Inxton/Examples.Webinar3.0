@@ -19,6 +19,7 @@ namespace Program
             fbData._logStart.Subscribe(OnValueChange);
 
             //DataTargets.Add(new InfluxDatabase<PlainstData>());
+            //DataTargets.Add(new MongoDatabase<PlainstData>());
             DataTargets.Add(new CsvDatabase<PlainstData>());
 
             Console.ReadKey();
