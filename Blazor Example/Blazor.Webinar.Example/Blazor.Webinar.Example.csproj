@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Inxton.Package.Vortex.Core" Version="1.9.7" />
-    <PackageReference Include="Vortex.Presentation.Controls.Blazor" Version="1.10.0-alpha.394" />
+	  <PackageReference Include="Inxton.Package.Vortex.Core" Version="1.10.0-nightly.415" />
+	  <PackageReference Include="Inxton.Vortex.Presentation.Controls.Blazor-experimental" Version="1.10.0-nightly.415" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +27,12 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\jozef.chmelar.ml.MTS\.nuget\packages\inxton.vortex.presentation.controls.blazor-experimental\1.10.0-nightly.415\contentFiles\any\net5.0\Styles\custom.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -61,3 +61,13 @@
 2021-04-08 20:43:18.119 +02:00 [INF] Emitting files into 'J:\MTS\Develop\GitHub\Inxton\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
 2021-04-08 20:43:18.243 +02:00 [INF] Compiling sources 'Plc'...
 2021-04-08 20:43:19.704 +02:00 [INF] >>>>>>I, Done
+2021-04-15 10:00:10.932 +02:00 [INF] Builder version : 1.10.0.0 / 1.10.0-nightly.415+Branch.nightly.Sha.e2e0c9eb482abc9f98bf7db75ee932113e600b6d
+2021-04-15 10:01:08.003 +02:00 [ERR] >>>>>>"E","","Failed to retrieve information from solution file 'C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln'","","","0","0"
+2021-04-15 10:01:19.593 +02:00 [INF] Builder version : 1.10.0.0 / 1.10.0-nightly.415+Branch.nightly.Sha.e2e0c9eb482abc9f98bf7db75ee932113e600b6d
+2021-04-15 10:01:21.358 +02:00 [INF] Emitting files into 'C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-15 10:01:21.497 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-15 10:01:22.653 +02:00 [INF] >>>>>>I, Done
+2021-04-15 10:01:26.883 +02:00 [INF] Builder version : 1.10.0.0 / 1.10.0-nightly.415+Branch.nightly.Sha.e2e0c9eb482abc9f98bf7db75ee932113e600b6d
+2021-04-15 10:01:28.243 +02:00 [INF] Emitting files into 'C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\PlcConnector\_generated'
+2021-04-15 10:01:28.266 +02:00 [INF] Compiling sources 'Plc'...
+2021-04-15 10:01:28.938 +02:00 [INF] >>>>>>I, Done

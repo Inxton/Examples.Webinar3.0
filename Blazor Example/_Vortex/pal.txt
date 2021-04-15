@@ -88,3 +88,16 @@
 2021-04-08 20:43:16.752 +02:00 [INF] Updating project Plc.Plc
 2021-04-08 20:43:19.669 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
 2021-04-08 20:43:19.671 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-15 10:00:13.434 +02:00 [INF] Opening solution: C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-15 10:01:19.738 +02:00 [INF] Opening solution: C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-15 10:01:19.903 +02:00 [INF] Loading dependency tree for project 'C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-15 10:01:20.406 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-15 10:01:20.551 +02:00 [INF] Updating project Plc.Plc
+2021-04-15 10:01:22.625 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-15 10:01:22.626 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.
+2021-04-15 10:01:27.027 +02:00 [INF] Opening solution: C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\Blazor.Webinar.Example.sln
+2021-04-15 10:01:27.154 +02:00 [INF] Loading dependency tree for project 'C:\MTS\Develop\GitHub\Examples.Webinar3.0\Blazor Example\PlcConnector\PlcConnector.csproj'
+2021-04-15 10:01:27.402 +02:00 [INF] Building project 'Plc.Plc'
+2021-04-15 10:01:27.514 +02:00 [INF] Updating project Plc.Plc
+2021-04-15 10:01:28.916 +02:00 [WRN] Twin assembly version (0.0.0.0) and plc project version (1.9.6.256) do not match. You need to adjust the version of the plc project manually. Project property tab version.
+2021-04-15 10:01:28.917 +02:00 [INF] Twin assembly version '0.0.0.0' and plc library version '1.9.6.256' of 'Plc' do not match the library will not be compiled.

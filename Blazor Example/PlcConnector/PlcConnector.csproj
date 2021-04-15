@@ -4,8 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Inxton.Package.Vortex.Core" Version="1.9.7" />
-    <PackageReference Include="Inxton.Vortex.Framework.Abstractions" Version="1.10.0-alpha.394" />
+	  <PackageReference Include="Inxton.Package.Vortex.Core" Version="1.10.0-nightly.415" />
+	  <PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.10.0-nightly.415" />
+	  <PackageReference Include="Inxton.vortex.compiler.console" Version="1.10.0-nightly.415" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Localizations.Designer.cs">
