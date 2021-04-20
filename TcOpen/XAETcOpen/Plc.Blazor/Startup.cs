@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Plc.Blazor.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +26,7 @@ namespace Plc.Blazor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
+            services.AddServerSideBlazor();          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

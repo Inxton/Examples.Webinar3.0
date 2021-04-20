@@ -21,96 +21,98 @@
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     TextOptions.TextFormattingMode="Ideal"
     TextOptions.TextRenderingMode="Auto"
-    Title="MainWindow">
+    Title="TcOpen in WPF">
+    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="3">
+    <ScrollViewer>
     <Grid>
         <TabControl>
-            <TabItem Header="Sequencer">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="350" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <materialDesign:Card
+                    <TabItem Header="Sequencer">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <materialDesign:Card
                         Grid.Row="0"
                         Margin="5"
                         materialDesign:ShadowAssist.ShadowDepth="Depth1"
                         Padding="3">
-                        <GroupBox Header="Current step info">
-                            <Grid Grid.IsSharedSizeScope="true">
-                                <vortex:RenderableContentControl DataContext="{Binding MAIN._station001._sequence._currentStep}" PresentationType="DisplaySlim" />
-                            </Grid>
-                        </GroupBox>
-                    </materialDesign:Card>
-                    <materialDesign:Card
+                                <GroupBox Header="Current step info">
+                                    <Grid Grid.IsSharedSizeScope="true">
+                                        <vortex:RenderableContentControl DataContext="{Binding MAIN._station001._sequence._currentStep}" PresentationType="DisplaySlim" />
+                                    </Grid>
+                                </GroupBox>
+                            </materialDesign:Card>
+                            <materialDesign:Card
                         Grid.Row="1"
                         Margin="5"
                         materialDesign:ShadowAssist.ShadowDepth="Depth1"
                         Padding="3">
-                        <GroupBox Header="Sequencer step-by step controller">
-                            <WrapPanel Margin="10" HorizontalAlignment="Center">
-                                <CheckBox
+                                <GroupBox Header="Sequencer step-by step controller">
+                                    <WrapPanel Margin="10" HorizontalAlignment="Center">
+                                        <CheckBox
                                     Margin="3"
                                     Content="Step mode"
                                     IsChecked="{Binding MAIN._station001._sequence._switchToStep.Cyclic}" />
-                                <Button Margin="3" Click="StepBackward_Click" Content="Step --"/>
-                                <Button Margin="3" Click="StepIn_Click" Content="Step In"/>
-                                <Button Margin="3" Click="StepForward_Click" Content="Step ++"/>
-                            </WrapPanel>
-                        </GroupBox>
-                    </materialDesign:Card>
-                    <materialDesign:Card
+                                        <Button Margin="3" Click="StepBackward_Click" Content="Step --"/>
+                                        <Button Margin="3" Click="StepIn_Click" Content="Step In"/>
+                                        <Button Margin="3" Click="StepForward_Click" Content="Step ++"/>
+                                    </WrapPanel>
+                                </GroupBox>
+                            </materialDesign:Card>
+                            <materialDesign:Card
                         Grid.Row="2"
                         Margin="5"
                         materialDesign:ShadowAssist.ShadowDepth="Depth1"
                         Padding="2">
-                        <GroupBox Grid.Row="2" Header="Simulation delay">
-                            <Slider
+                                <GroupBox Grid.Row="2" Header="Simulation delay">
+                                    <Slider
                                 Value="{Binding MAIN._station001._components._simTimerValue.Cyclic}"
                                 Maximum="5000"
                                 Minimum="50"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 TickFrequency="50"
                                 TickPlacement="TopLeft" />
-                        </GroupBox>
-                    </materialDesign:Card>
-                    <materialDesign:Card
+                                </GroupBox>
+                            </materialDesign:Card>
+                            <materialDesign:Card
                         Grid.Row="3"
                         Margin="3"
                         materialDesign:ShadowAssist.ShadowDepth="Depth2"
                         Padding="3">
-                        <GroupBox Header="{Binding VerticalOffset, ElementName=scrollImage, Mode=OneWay}" ScrollViewer.VerticalScrollBarVisibility="Visible">
-                            <ScrollViewer mah:ScrollViewerHelper.BubbleUpScrollEventToParentScrollviewer="True" x:Name="scrollImage">
-                                <Image Width="820"
+                                <GroupBox Header="{Binding VerticalOffset, ElementName=scrollImage, Mode=OneWay}" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                                    <ScrollViewer mah:ScrollViewerHelper.BubbleUpScrollEventToParentScrollviewer="True" x:Name="scrollImage">
+                                        <Image Width="820"
                                 x:Name="imageBox"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center" Stretch="Uniform" Source="/images/100-800.PNG" />
-                            </ScrollViewer>
-                        </GroupBox>
-                    </materialDesign:Card>
-                    <CheckBox Grid.Row="4" IsChecked="{Binding MAIN._station001._sequence._failedToLoad.Cyclic}" Content="Simulate failed to load"/>
-                    <materialDesign:Card Grid.Row="5">
-                        <StackPanel>
-                            <Expander HorizontalAlignment="Stretch" Header="Messages">
-                                <StackPanel
+                                    </ScrollViewer>
+                                </GroupBox>
+                            </materialDesign:Card>
+                            <CheckBox Grid.Row="4" IsChecked="{Binding MAIN._station001._sequence._failedToLoad.Cyclic}" Content="Simulate failed to load"/>
+                            <materialDesign:Card Grid.Row="5">
+                                <StackPanel>
+                                    <Expander HorizontalAlignment="Stretch" Header="Messages">
+                                        <StackPanel
                                     Margin="24,8,24,16"
                                     Orientation="Vertical"
                                     TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                    <inxton:TcoDiagnosticsView x:Name="DiagnosticsView"  />
-                                    <TextBlock Style="{DynamicResource HorizontalExpanderContentTextBlock}" />
+                                            <inxton:TcoDiagnosticsView x:Name="DiagnosticsView"  />
+                                            <TextBlock Style="{DynamicResource HorizontalExpanderContentTextBlock}" />
+                                        </StackPanel>
+                                    </Expander>
                                 </StackPanel>
-                            </Expander>
-                        </StackPanel>
-                    </materialDesign:Card>
+                            </materialDesign:Card>
 
-                </Grid>
-            </TabItem>
-            <TabItem Header="Autogen">
-                <vortex:RenderableContentControl DataContext="{Binding MAIN, Mode=OneWay}" PresentationType="Base-Control" />
-            </TabItem>
-        </TabControl>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
     </Grid>
+    </ScrollViewer>
+    </materialDesign:Card>
 </Window>

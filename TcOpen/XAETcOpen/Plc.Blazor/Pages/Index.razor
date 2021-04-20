@@ -6,7 +6,7 @@
 
 <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" @bind-value="PlcConnector.Entry.PlcController.MAIN._station001._sequence._switchToStep.Cyclic" />
-    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+    <label class="form-check-label" for="flexSwitchCheckDefault">Toggle step mode</label>
 </div>
 <button class="btn btn-primary" @onclick="StepBackward_Click">Step back</button>
 <button class="btn btn-primary" @onclick="StepIn_Click">Step in</button>
@@ -28,9 +28,3 @@
         Entry.PlcController.MAIN._station001._sequence._stepModeControler._stepIn._invokeRequest.Cyclic = true;
     }
 }
-
-
-@*<RenderableContentControl Context="PlcConnector.Entry.PlcController.MAIN._station001._sequence._stepModeControler"
-                              Presentation="Vortex.Presentation.Blazor.Enums.PresentationType.Control">
-
-    </RenderableContentControl>*@
